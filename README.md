@@ -109,7 +109,23 @@ Steps to install and configure the OSSIM sensor VM:
    - NIC1: Host-only Adapter
    - NIC2: Host-only Adapter with Promiscuous Mode set to "Allow All"
 
-  **connectivity test!!!!!!!!!!!!!!**
+### Additional Server And Sensor Configuration
+blabla
+
+1. **Server-Sensor Connectivity Test**:
+   ```
+   [Connectivity Test screenshots]
+   ```
+
+2. **Server Configuration**:
+   ```
+   [Server Configuration Test screenshots]
+   ```
+
+3. **Sensor Configuration**:
+   ```
+   [Sensor Configuration Test screenshots]
+   ```
 
 ### Target Systems Setup
 
