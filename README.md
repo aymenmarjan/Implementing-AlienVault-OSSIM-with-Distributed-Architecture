@@ -39,7 +39,7 @@ The implementation consists of:
   - Quad-core CPU or better
   
 - **Software Requirements**:
-  - VirtualBox (latest version) with Extension Pack
+  - VirtualBox (latest version)
   - AlienVault OSSIM ISO ([Download Link](https://cybersecurity.att.com/products/ossim/download))
   - Ubuntu Server ISO ([Download Link](https://ubuntu.com/download/server))
   - Kali Linux VirtualBox VM ([Download Link](https://www.kali.org/get-kali/))
@@ -62,7 +62,13 @@ The lab environment uses a host-only network (`192.168.100.0/24`) for isolation 
 3. Create a new network with the following settings:
    - IPv4 Address: 192.168.100.1
    - Network Mask: 255.255.255.0
-   - Disable DHCP Server
+
+![host only](assets/images/architecture-diagram.png)
+
+   - Don't forget to configure DHCP Server
+
+![dhcp](assets/images/architecture-diagram.png)
+
 
 ### OSSIM Server Deployment
 Detailed steps to install and configure the OSSIM server VM:
@@ -70,9 +76,9 @@ Detailed steps to install and configure the OSSIM server VM:
 1. **Create the VM**:
    - Name: ossim-server
    - OS: Debian (64-bit)
-   - Memory: 12-14GB RAM
+   - Memory: 4GB+ RAM
    - CPU: 2-3 processors
-   - Storage: 25GB fixed disk
+   - Storage: 25GB
 
 2. **Installation Process**:
    ```
@@ -90,9 +96,9 @@ Steps to install and configure the OSSIM sensor VM:
 1. **Create the VM**:
    - Name: ossim-sensor
    - OS: Debian (64-bit)
-   - Memory: 6GB RAM
+   - Memory: 4GB+ RAM
    - CPU: 2 processors
-   - Storage: 15GB fixed disk
+   - Storage: 15GB
 
 2. **Installation Process**:
    ```
@@ -102,6 +108,8 @@ Steps to install and configure the OSSIM sensor VM:
 3. **Network Interface Configuration**:
    - NIC1: Host-only Adapter
    - NIC2: Host-only Adapter with Promiscuous Mode set to "Allow All"
+
+  **connectivity test!!!!!!!!!!!!!!**
 
 ### Target Systems Setup
 
