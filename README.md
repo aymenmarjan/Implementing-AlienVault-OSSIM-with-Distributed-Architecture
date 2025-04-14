@@ -138,8 +138,9 @@ blabla
    - Storage: 15GB fixed disk
 
 2. **Installation Process**:
+Follow default steps  
    ```
-   [Step-by-step installation process with screenshots]
+   [download screenshots]
    ```
 
 3. **Install and Configure Apache**:
@@ -151,7 +152,9 @@ blabla
    sudo ufw enable
    ```
 
-4. **Configure Static IP**:
+4. **Change network mode to Host-Only Adapter**
+
+5. **Configure Static IP**:
    ```bash
    # Edit Netplan configuration
    sudo nano /etc/netplan/00-installer-config.yaml
@@ -174,7 +177,6 @@ blabla
 
 2. **VM Configuration**:
    - Change network mode to Host-Only Adapter
-   - Set IP address to 192.168.100.102
 
 3. **Update the System**:
    ```bash
@@ -183,6 +185,7 @@ blabla
    ```
 
 ## ⚙️ Configuration
+Turn on all the VMs
 
 ### Server Configuration
 1. **Access the Web Interface**:
@@ -205,7 +208,7 @@ blabla
 
 ### Sensor Configuration
 1. **Verify Sensor Connection**:
-   - On server, check under Environment → Sensors
+   - On server, click `Insert` under **Configuration* → **Deployment* → **Components* → **SENSORS*
    - Confirm sensor (192.168.100.151) is properly connected
 
 2. **Configure Detection Settings**:
