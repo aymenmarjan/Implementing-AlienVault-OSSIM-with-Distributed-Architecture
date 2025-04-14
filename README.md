@@ -215,13 +215,23 @@ Turn on all the VMs
      ```
 
 2. **Configure Detection Settings**:
-Click on `system detail` icon.
-Click `Sensor Configuration`.
-Click `Detection`.
-Make sure you have the same.
+- Click on `system detail` icon.
+- Click `Sensor Configuration`.
+- Click `Detection`.
+- Make sure you have the same.
+
+3. **Detection Test**:
+- Search `nikto` under **Configuration** → **THREAT INTELLIGENCE** → **DIRECTIVES**
+- Clone Directive.
+- Clik on `+` button beside `!HOME_NET` (FROM column) to modify:
+- In source section replace `!HOME_NET` with `HOME_NET`, Then click `MODIFY`.
+- `Reload Directive` to save.
+- On OssimSensor terminal (`Jailbreak System` option)
+   ```bash
+   nano /etc/suricata/suricata.yaml
    ```
-   [Detection settings configuration and screenshots]
-   ```
+   - Set `EXTERNAL_NET: any`.
+   - Save and exit.
 
 ### Log Forwarding Setup
 1. **Configure Syslog on Web Server**:
