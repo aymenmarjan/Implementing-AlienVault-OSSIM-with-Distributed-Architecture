@@ -203,15 +203,22 @@ Turn on all the VMs
 
 3. **Screenshots**:
    ```
-   [Web interface configuration screenshots]
+   [Wizard screenshots]
    ```
 
 ### Sensor Configuration
 1. **Verify Sensor Connection**:
-   - On server, click `Insert` under **Configuration* → **Deployment* → **Components* → **SENSORS*
-   - Confirm sensor (192.168.100.151) is properly connected
+   - On server, click `Insert` under **Configuration** → **Deployment** → **Components** → **SENSORS**
+   - Configure the sensor (192.168.100.151) to be added.
+     ```
+     [Sensor screenshots]
+     ```
 
 2. **Configure Detection Settings**:
+Click on `system detail` icon.
+Click `Sensor Configuration`.
+Click `Detection`.
+Make sure you have the same.
    ```
    [Detection settings configuration and screenshots]
    ```
