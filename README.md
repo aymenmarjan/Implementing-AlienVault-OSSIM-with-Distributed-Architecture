@@ -232,6 +232,16 @@ Turn on all the VMs
    ```
    - Set `EXTERNAL_NET: any`.
    - Save and exit.
+   - Restart suricata service
+     ```bash
+     service suricata restart
+     ```
+  - Exit terminal
+- On Kali VM
+  ```bash
+  sudo nikto -h 192.168.100.200
+  ```
+- And There we have it! We found our sercurity events under 
 
 ### Log Forwarding Setup
 1. **Configure Syslog on Web Server**:
@@ -252,22 +262,12 @@ Turn on all the VMs
 
 3. **Verify Log Forwarding**:
    ```bash
-   # On the sensor
+   # On the sever
    sudo tcpdump -i eth0 port 514
    ```
-
-### Detection Rules
-1. **Customize Suricata Rules**:
-   - Path: `/etc/suricata/rules/`
-   - Example rule modification:
-   
-   ```
-   [Example rule modifications for internal network]
-   ```
-
-2. **Apply Network-Specific Settings**:
-   - Edit `/etc/suricata/suricata.yaml`
-   - Set `EXTERNAL_NET: any`
+  - From Kali VM try to connect to the webserver via SSH:
+  - Ossim is recieving logs from syslog:
+  - Alerts recieved Also on our siem interface
 
 ## 🧪 Testing & Validation
 
