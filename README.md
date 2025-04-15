@@ -326,7 +326,7 @@ Run both machines together.
    - CPU: 2 processors
    - Storage: 15GB fixed disk
 
-2. **Installation Process**:
+2. **Installation Process**:<br>
 Follow default steps.
 
 - 
