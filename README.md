@@ -497,7 +497,7 @@ From now on we don't need the internet on this VM. Turn it off and change its ne
    ```
 
 3. **Network Configuration**:
-   - After you updated the system, You can change network mode to Host-Only Adapter.
+After you updated the system, You can change network mode to Host-Only Adapter.
 
 ## ⚙️ Configuration
 Turn on all the VMs
