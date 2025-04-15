@@ -333,7 +333,7 @@ Follow default steps.
 ![host only](Images/image70.png)
 
 - 
-![host only](Images/image72.png)
+![host only](Images/image71.png)
 
 3. **Install and Configure Apache**:
    ```bash
@@ -379,10 +379,14 @@ Follow default steps.
 ## ⚙️ Configuration
 Turn on all the VMs
 
+![host only](Images/image72.png)
+
 ### Server Configuration
 1. **Access the Web Interface**:
    - Navigate to https://192.168.100.150
    - Create admin account
+
+![host only](Images/image73.png)
 
 2. **Environment Setup via Wizard**:
    - Add hosts:
@@ -394,35 +398,97 @@ Turn on all the VMs
    - Deploy HIDS agents
 
 3. **Screenshots**:
-   ```
-   [Wizard screenshots]
-   ```
+
+- 
+![host only](Images/image74.png)
+
+- 
+![host only](Images/image75.png)
+
+- 
+![host only](Images/image76.png)
+
+- 
+![host only](Images/image77.png)
+
+- 
+![host only](Images/image78.png)
+
+- 
+![host only](Images/image79.png)
+
+- 
+![host only](Images/image80.png)
+
+- 
+![host only](Images/image81.png)
+
+- 
+![host only](Images/image82.png)
+
+- 
+![host only](Images/image83.png)
 
 ### Sensor Configuration
 1. **Verify Sensor Connection**:
    - On server, click `Insert` under **Configuration** → **Deployment** → **Components** → **SENSORS**
+
+![host only](Images/image84.png)
+
    - Configure the sensor (192.168.100.151) to be added.
-     ```
-     [Sensor screenshots]
-     ```
+
+![host only](Images/image85.png)
+
+![host only](Images/image86.png)
 
 2. **Configure Detection Settings**:
+
 - Click on `system detail` icon.
+
+![host only](Images/image87.png)
+
 - Click `Sensor Configuration`.
+
+![host only](Images/image88.png)
+
 - Click `Detection`.
+
+![host only](Images/image89.png)
+
 - Make sure you have the same.
 
+![host only](Images/image90.png)
+
 3. **Detection Test**:
+
 - Search `nikto` under **Configuration** → **THREAT INTELLIGENCE** → **DIRECTIVES**
+
+![host only](Images/image91.png)
+
 - Clone Directive.
+
+![host only](Images/image92.png)
+
 - Clik on `+` button beside `!HOME_NET` (FROM column) to modify:
+
+![host only](Images/image93.png)
+
 - In source section replace `!HOME_NET` with `HOME_NET`, Then click `MODIFY`.
+
+![host only](Images/image94.png)
+
 - `Reload Directive` to save.
+
+![host only](Images/image95.png)
+
 - On OssimSensor terminal (`Jailbreak System` option)
    ```bash
    nano /etc/suricata/suricata.yaml
    ```
    - Set `EXTERNAL_NET: any`.
+
+![host only](Images/image96.png)
+
    - Save and exit.
    - Restart suricata service
      ```bash
@@ -433,7 +499,9 @@ Turn on all the VMs
   ```bash
   sudo nikto -h 192.168.100.200
   ```
-- And There we have it! We found our sercurity events under 
+- And There we have it! We found our sercurity events under
+
+![host only](Images/image97.png)
 
 ### Log Forwarding Setup
 1. **Configure Syslog on Web Server**:
@@ -458,8 +526,17 @@ Turn on all the VMs
    sudo tcpdump -i eth0 port 514
    ```
   - From Kali VM try to connect to the webserver via SSH:
+
+![host only](Images/image98.png)
+
   - Ossim is recieving logs from syslog:
+
+![host only](Images/image99.png)
+
   - Alerts recieved Also on our siem interface
+
+![host only](Images/image100.png)
+
 
 ## 🧪 Testing & Validation
 
