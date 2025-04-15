@@ -84,57 +84,54 @@ Detailed steps to install and configure the OSSIM server VM:
 2. **Installation Process**:</br>
 Power on, Then follow:
 
-- 
-![host only](Images/image3.png)
+- Mount your inmage and reboot:
+![iso](Images/image3.png)
 
-- 
-![host only](Images/image4.png)
+- Pick the first choice as we're on `Server Deployment` step:
+![server](Images/image4.png)
 
-- 
-![host only](Images/image5.png)
+- Select a language:
+![language](Images/image5.png)
 
-- 
-![host only](Images/image6.png)
+- Select your location:
+![location](Images/image6.png)
 
-- 
-![host only](Images/image7.png)
+- Configure the keyboard:
+![keyboard](Images/image7.png)
 
-- 
+- Use `192.168.100.150` as address:
 ![host only](Images/image8.png)
 
-- 
+- Leave the Netmask as default:
 ![host only](Images/image9.png)
 
-- 
+- Use `192.168.100.1` as gateway:
 ![host only](Images/image10.png)
 
-- 
+- Use `192.168.100.1` as Name server address:
 ![host only](Images/image11.png)
 
-- 
-![host only](Images/image12.png)
+- Set your Password, Confirme it:
+![host only](Images/image12.png) 
 
-- 
+- Select your time zone:
 ![host only](Images/image13.png)
 
-- 
+- Wait...
 ![host only](Images/image14.png)
 
-- 
+- Wait more...
 ![host only](Images/image15.png)
 
-- 
+- And there you have it:
 ![host only](Images/image16.png)
 
 3. **Post-Installation Configuration**:
 
-- 
-![host only](Images/image17.png)
-
-- 
+- After you login (`root:root` In my case), Shut it down:
 ![host only](Images/image18.png)
 
-- 
+- Change its Networking mode to `Host-Only Adapter`:
 ![host only](Images/image19.png)
 
 ### OSSIM Sensor Deployment
@@ -151,49 +148,51 @@ Steps to install and configure the OSSIM sensor VM:
 2. **Installation Process**:</br>
 Power on, Then follow:
 
-- 
+- Mount your inmage and reboot:
 ![host only](Images/image20.png)
 
-- 
+- Select `Install Alient Sensor`:
 ![host only](Images/image21.png)
 
-- 
+- Select a language:
 ![host only](Images/image22.png)
 
-- 
+- Select your location:
 ![host only](Images/image23.png)
 
-- 
+- Configure the keyboard:
 ![host only](Images/image24.png)
 
-- 
+- Set `192.168.100.151` as Address:
 ![host only](Images/image25.png)
 
-- 
+- Leave default Netmask
 ![host only](Images/image26.png)
 
-- 
+- Use `192.168.100.1` as Gateway
 ![host only](Images/image27.png)
 
-- 
+- Leave `192.168.100.1` as Name server address:
 ![host only](Images/image28.png)
 
-- 
+- Set your Password, Confirme it:
 ![host only](Images/image29.png)
 
-- 
+- Select your time zone:
 ![host only](Images/image30.png)
 
-- 
+- Wait...
 ![host only](Images/image31.png)
 
-- 
+- Wait more...
 ![host only](Images/image32.png)
 
-- 
+- And there you have it:
 ![host only](Images/image33.png)
 
-3. **Network Interface Configuration**:
+3. **Network Interface Configuration**:<br>
+After you shut it down, you should configure 2 interfaces as:
+
    - NIC1: Host-only Adapter
 
 ![host only](Images/image34.png)
@@ -209,57 +208,58 @@ Run both machines together.
 ![host only](Images/image35.png)
 
 
-1. **Server-Sensor Connectivity Test**:
+1. **Server-Sensor Connectivity Test**:<br>
+From The `Ossim-Server` machine: (or the opposite)
 
-- 
+- Select `Jailbreak System` option:
 ![host only](Images/image37.png)
 
-- 
+- Click `yes`:
 ![host only](Images/image38.png)
 
-- 
+- Try to ping on Sensor address:
 ![host only](Images/image39.png)
 
 
 2. **Server Configuration**:
 
-- 
+- Turn-on Ossim-Server
 ![host only](Images/image40.png)
 
-- 
+- Select `Configure Hostname` option:
 ![host only](Images/image41.png)
 
-- 
+- Set `Ossimserver` as Hostname:
 ![host only](Images/image42.png)
 
-- 
+- Confirme:
 ![host only](Images/image43.png)
 
-- 
+- Click `Back`
 ![host only](Images/image44.png)
 
-- 
+- Select `Configure Sensor` option:
 ![host only](Images/image45.png)
 
-- 
+- Then, Select `Configure Data Source Plugins` option:
 ![host only](Images/image46.png)
 
-- 
+- Search `Syslog` Data Source, Select it, Click ok:
 ![host only](Images/image47.png)
 
-- 
+- Back to the main menu:
 ![host only](Images/image48.png)
 
-- 
+- Apply:
 ![host only](Images/image49.png)
 
-- 
+- Confirme:
 ![host only](Images/image50.png)
 
-- 
+- Wait...
 ![host only](Images/image51.png)
 
-- 
+- Click `Ok`:
 ![host only](Images/image52.png)
 
 
