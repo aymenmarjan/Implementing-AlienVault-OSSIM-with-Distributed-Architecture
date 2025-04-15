@@ -23,8 +23,8 @@
 This project documents the implementation of AlienVault OSSIM (Open Source Security Information and Event Management), a comprehensive SIEM solution for threat detection, incident response, and compliance management. The implementation follows a distributed architecture with separate server and sensor components to demonstrate enterprise-grade deployment scenarios.
 
 ## 🏗️ Architecture
-![OSSIM Architecture Diagram](assets/images/architecture-diagram.png)
-*[Replace with actual architecture diagram]*
+
+![OSSIM Architecture Diagram](images/image0.png)
 
 The implementation consists of:
 - **OSSIM Server** (Central management, correlation, and dashboard)
@@ -63,11 +63,11 @@ The lab environment uses a host-only network (`192.168.100.0/24`) for isolation 
    - IPv4 Address: 192.168.100.1
    - Network Mask: 255.255.255.0
 
-![host only](assets/images/architecture-diagram.png)
+![host only](Images/image1.png)
 
    - Don't forget to configure DHCP Server
 
-![dhcp](assets/images/architecture-diagram.png)
+![dhcp](Images/image2.png)
 
 
 ### OSSIM Server Deployment
@@ -79,16 +79,63 @@ Detailed steps to install and configure the OSSIM server VM:
    - Memory: 4GB+ RAM
    - CPU: 2-3 processors
    - Storage: 25GB
+> 💡 Tip: Skip adding the ISO when creating the VM. We'll mount it manually later.
 
-2. **Installation Process**:
-   ```
-   [Step-by-step installation process with screenshots]
-   ```
+2. **Installation Process**:</br>
+Power on, Then follow:
+
+- 
+![host only](Images/image3.png)
+
+- 
+![host only](Images/image4.png)
+
+- 
+![host only](Images/image5.png)
+
+- 
+![host only](Images/image6.png)
+
+- 
+![host only](Images/image7.png)
+
+- 
+![host only](Images/image8.png)
+
+- 
+![host only](Images/image9.png)
+
+- 
+![host only](Images/image10.png)
+
+- 
+![host only](Images/image11.png)
+
+- 
+![host only](Images/image12.png)
+
+- 
+![host only](Images/image13.png)
+
+- 
+![host only](Images/image14.png)
+
+- 
+![host only](Images/image15.png)
+
+- 
+![host only](Images/image16.png)
 
 3. **Post-Installation Configuration**:
-   ```
-   [Configuration steps with command outputs]
-   ```
+
+- 
+![host only](Images/image17.png)
+
+- 
+![host only](Images/image18.png)
+
+- 
+![host only](Images/image19.png)
 
 ### OSSIM Sensor Deployment
 Steps to install and configure the OSSIM sensor VM:
@@ -99,33 +146,175 @@ Steps to install and configure the OSSIM sensor VM:
    - Memory: 4GB+ RAM
    - CPU: 2 processors
    - Storage: 15GB
+> 💡 Tip: Skip adding the ISO when creating the VM. We'll mount it manually later.
 
-2. **Installation Process**:
-   ```
-   [Step-by-step installation process with screenshots]
-   ```
+2. **Installation Process**:</br>
+Power on, Then follow:
+
+- 
+![host only](Images/image20.png)
+
+- 
+![host only](Images/image21.png)
+
+- 
+![host only](Images/image22.png)
+
+- 
+![host only](Images/image23.png)
+
+- 
+![host only](Images/image24.png)
+
+- 
+![host only](Images/image25.png)
+
+- 
+![host only](Images/image26.png)
+
+- 
+![host only](Images/image27.png)
+
+- 
+![host only](Images/image28.png)
+
+- 
+![host only](Images/image29.png)
+
+- 
+![host only](Images/image30.png)
+
+- 
+![host only](Images/image31.png)
+
+- 
+![host only](Images/image32.png)
+
+- 
+![host only](Images/image33.png)
 
 3. **Network Interface Configuration**:
    - NIC1: Host-only Adapter
+
+![host only](Images/image34.png)
+
    - NIC2: Host-only Adapter with Promiscuous Mode set to "Allow All"
 
+![host only](Images/image35.png)
+
+
 ### Additional Server And Sensor Configuration
-blabla
+Run both machines together.
+
+![host only](Images/image35.png)
+
 
 1. **Server-Sensor Connectivity Test**:
-   ```
-   [Connectivity Test screenshots]
-   ```
+
+- 
+![host only](Images/image37.png)
+
+- 
+![host only](Images/image38.png)
+
+- 
+![host only](Images/image39.png)
+
 
 2. **Server Configuration**:
-   ```
-   [Server Configuration Test screenshots]
-   ```
+
+- 
+![host only](Images/image40.png)
+
+- 
+![host only](Images/image41.png)
+
+- 
+![host only](Images/image42.png)
+
+- 
+![host only](Images/image43.png)
+
+- 
+![host only](Images/image44.png)
+
+- 
+![host only](Images/image45.png)
+
+- 
+![host only](Images/image46.png)
+
+- 
+![host only](Images/image47.png)
+
+- 
+![host only](Images/image48.png)
+
+- 
+![host only](Images/image49.png)
+
+- 
+![host only](Images/image50.png)
+
+- 
+![host only](Images/image51.png)
+
+- 
+![host only](Images/image52.png)
+
 
 3. **Sensor Configuration**:
-   ```
-   [Sensor Configuration Test screenshots]
-   ```
+
+- 
+![host only](Images/image66(52+1).png)
+
+- 
+![host only](Images/image67(52+2).png)
+
+- 
+![host only](Images/image68(52+3).png)
+
+- 
+![host only](Images/image69(52+4).png)
+
+- 
+![host only](Images/image53.png)
+
+- 
+![host only](Images/image54.png)
+
+- 
+![host only](Images/image55.png)
+
+- 
+![host only](Images/image56.png)
+
+- 
+![host only](Images/image57.png)
+
+- 
+![host only](Images/image58.png)
+
+- 
+![host only](Images/image59.png)
+
+- 
+![host only](Images/image60.png)
+
+- 
+![host only](Images/image61.png)
+
+- 
+![host only](Images/image62.png)
+
+- 
+![host only](Images/image63.png)
+
+- 
+![host only](Images/image64.png)
+
+- 
+![host only](Images/image65.png)
 
 ### Target Systems Setup
 
@@ -138,10 +327,13 @@ blabla
    - Storage: 15GB fixed disk
 
 2. **Installation Process**:
-Follow default steps  
-   ```
-   [download screenshots]
-   ```
+Follow default steps.
+
+- 
+![host only](Images/image70.png)
+
+- 
+![host only](Images/image72.png)
 
 3. **Install and Configure Apache**:
    ```bash
@@ -175,14 +367,14 @@ Follow default steps
    - Add the Kali .vbox file to VirtualBox
    - Rename to "Kali-OSSIM-Lab"
 
-2. **VM Configuration**:
-   - Change network mode to Host-Only Adapter
-
-3. **Update the System**:
+2. **Update the System**:
    ```bash
    sudo apt update
    sudo apt upgrade -y
    ```
+
+3. **Network Configuration**:
+   - After you updated the system, You can change network mode to Host-Only Adapter.
 
 ## ⚙️ Configuration
 Turn on all the VMs
