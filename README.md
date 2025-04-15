@@ -4,7 +4,6 @@
 ## 📋 Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
 - [Installation Guide](#installation-guide)
   - [Network Setup](#network-setup)
   - [OSSIM Server Deployment](#ossim-server-deployment)
@@ -32,12 +31,6 @@ The implementation consists of:
 - **Ubuntu Web Server** (Target system generating logs)
 - **Kali Linux VM** (Attack simulation platform)
 
-## 📝 Prerequisites
-- **Hardware Requirements**:
-  - Minimum 16GB RAM recommended for the host system
-  - 100GB+ available disk space
-  - Quad-core CPU or better
-  
 - **Software Requirements**:
   - VirtualBox (latest version)
   - AlienVault OSSIM ISO ([Download Link](https://cybersecurity.att.com/products/ossim/download))
@@ -185,10 +178,10 @@ Power on, Then follow:
 ![sensor-progress1](Images/image31.png)
 
 - Wait more...
-![sensor-progress2](Images/image32.png)
+![progress2](Images/image15.png)
 
 - **Installation Complete**:
-![sensor-complete](Images/image33.png)
+![sensor-complete](Images/image32.png)
 
 3. **Network Interface Configuration**:<br>
 After you shut it down, you should configure 2 interfaces as:
@@ -223,98 +216,228 @@ From The `Ossim-Server` machine: (or the opposite)
 
 2. **Server Configuration**:
 
-- Turn-on Ossim-Server
-![host only](Images/image40.png)
+- **Boot from ISO Image**:
+![iso](Images/image3.png)
 
-- Select `Configure Hostname` option:
-![host only](Images/image41.png)
+- **Select Server Deployment Mode**:
+![server](Images/image4.png)
 
-- Set `Ossimserver` as Hostname:
-![host only](Images/image42.png)
+- **Configure System Language**:
+![language](Images/image5.png)
 
-- Confirme:
-![host only](Images/image43.png)
+- **Set Geographic Location**:
+![location](Images/image6.png)
 
-- Click `Back`
-![host only](Images/image44.png)
+- **Configure Keyboard Layout**:
+![keyboard](Images/image7.png)
 
-- Select `Configure Sensor` option:
-![host only](Images/image45.png)
+- **Configure Network: IP Address** (Use `192.168.100.150`):
+![network ip](Images/image8.png)
 
-- Then, Select `Configure Data Source Plugins` option:
-![host only](Images/image46.png)
+- **Configure Network: Subnet Mask** (Leave default):
+![network mask](Images/image9.png)
 
-- Search `Syslog` Data Source, Select it, Click ok:
-![host only](Images/image47.png)
+- **Configure Network: Gateway** (Use `192.168.100.1`):
+![network gateway](Images/image10.png)
 
-- Back to the main menu:
-![host only](Images/image48.png)
+- **Configure Network: DNS Server** (Use `192.168.100.1`):
+![network dns](Images/image11.png)
 
-- Apply:
-![host only](Images/image49.png)
+- **Set Root Password**:
+![password](Images/image12.png) 
 
-- Confirme:
-![host only](Images/image50.png)
+- **Select Time Zone**:
+![timezone](Images/image13.png)
 
-- Wait...
-![host only](Images/image51.png)
+- **Installation Progress** (First phase):
+![progress1](Images/image14.png)
 
-- Click `Ok`:
-![host only](Images/image52.png)
+- **Installation Progress** (Final phase):
+![progress2](Images/image15.png)
+
+- **Installation Complete**:
+![complete](Images/image16.png)
+
+## 3. **Post-Installation Network Configuration**
+
+- **Login and Shutdown** (Default credentials: `root:root`):
+![shutdown](Images/image18.png)
+
+- **Configure VM Network Adapter** (Change to `Host-Only Adapter`):
+![network-config](Images/image19.png)
+
+## OSSIM Sensor Deployment
+
+### 1. **VM Creation and Resource Allocation**
+   - Name: ossim-sensor
+   - OS: Debian (64-bit)
+   - Memory: 4GB+ RAM
+   - CPU: 2 processors
+   - Storage: 15GB
+> 💡 Tip: Skip adding the ISO when creating the VM. We'll mount it manually later.
+
+### 2. **Sensor Installation Process**
+
+- **Boot from ISO Image**:
+![boot-sensor](Images/image20.png)
+
+- **Select Sensor Installation Mode**:
+![sensor-mode](Images/image21.png)
+
+- **Configure System Language**:
+![sensor-language](Images/image22.png)
+
+- **Set Geographic Location**:
+![sensor-location](Images/image23.png)
+
+- **Configure Keyboard Layout**:
+![sensor-keyboard](Images/image24.png)
+
+- **Configure Network: IP Address** (Use `192.168.100.151`):
+![sensor-ip](Images/image25.png)
+
+- **Configure Network: Subnet Mask** (Leave default):
+![sensor-mask](Images/image26.png)
+
+- **Configure Network: Gateway** (Use `192.168.100.1`):
+![sensor-gateway](Images/image27.png)
+
+- **Configure Network: DNS Server** (Use `192.168.100.1`):
+![sensor-dns](Images/image28.png)
+
+- **Set Root Password**:
+![sensor-password](Images/image29.png)
+
+- **Select Time Zone**:
+![sensor-timezone](Images/image30.png)
+
+- **Installation Progress** (First phase):
+![sensor-progress1](Images/image31.png)
+
+- **Installation Progress** (Final phase):
+![sensor-progress2](Images/image32.png)
+
+- **Installation Complete**:
+![sensor-complete](Images/image33.png)
+
+### 3. **Network Interface Configuration**
+
+- **Configure Primary Interface** (NIC1: Host-only Adapter):
+![primary-nic](Images/image34.png)
+
+- **Configure Monitoring Interface** (NIC2: Host-only Adapter with Promiscuous Mode "Allow All"):
+![monitor-nic](Images/image35.png)
+
+## System Integration and Configuration
+
+- **Launch Both VMs**:
+![both-vms](Images/image35.png)
+
+### 1. **Connectivity Verification**
+
+- **Access System Shell** (Select "Jailbreak System"):
+![jailbreak](Images/image37.png)
+
+- **Confirm Shell Access**:
+![shell-confirm](Images/image38.png)
+
+- **Test Network Connectivity** (Ping between server and sensor):
+![ping-test](Images/image39.png)
+
+### 2. **OSSIM Server Configuration**
+
+- **Boot Server VM**:
+![boot-server](Images/image40.png)
+
+- **Access Hostname Configuration**:
+![hostname-menu](Images/image41.png)
+
+- **Set System Hostname** (Use `Ossimserver`):
+![set-hostname](Images/image42.png)
+
+- **Confirm Hostname Change**:
+![hostname-confirm](Images/image43.png)
+
+- **Return to Main Menu**:
+![main-menu](Images/image44.png)
+
+- **Access Sensor Configuration**:
+![sensor-config](Images/image45.png)
+
+- **Configure Data Sources**:
+![data-sources](Images/image46.png)
+
+- **Enable Syslog Collection**:
+![syslog](Images/image47.png)
+
+- **Return to Main Menu**:
+![return-menu](Images/image48.png)
+
+- **Apply Configuration Changes**:
+![apply-config](Images/image49.png)
+
+- **Confirm Configuration Update**:
+![config-confirm](Images/image50.png)
+
+- **Wait for Configuration Process**:
+![config-wait](Images/image51.png)
+
+- **Complete Configuration**:
+![config-complete](Images/image52.png)
 
 
 3. **Sensor Configuration**:
 
-- 
-![host only](Images/image66(52+1).png)
+- **Boot Sensor VM**:
+![sensor-boot](Images/image66(52+1).png)
 
-- 
-![host only](Images/image67(52+2).png)
+- **Access Hostname Configuration**:
+![hostname-menu](Images/image67(52+2).png)
 
-- 
-![host only](Images/image68(52+3).png)
+- **Set the Hostname as `OssimSensor`**:
+![set-sensor-hostname](Images/image68(52+3).png)
 
-- 
-![host only](Images/image69(52+4).png)
+- **Confirm Hostname Change**:
+![hostname-confirm](Images/image69(52+4).png)
 
-- 
-![host only](Images/image53.png)
+- **Access Sensor Configuration Menu**:
+![sensor-config](Images/image53.png)
 
-- 
-![host only](Images/image54.png)
+- **Configure Data Source Plugins**:
+![data-plugins](Images/image54.png)
 
-- 
-![host only](Images/image55.png)
+- **Enable Syslog Collection**:
+![syslog-enable](Images/image55.png)
 
-- 
-![host only](Images/image56.png)
+- **Configure AlienVault Server IP**:
+![server-ip-option](Images/image56.png)
 
-- 
-![host only](Images/image57.png)
+- **Set Server IP Address** (Enter `192.168.100.150`):
+![set-server-ip](Images/image57.png)
 
-- 
-![host only](Images/image58.png)
+- **Configure AlienVault Framework IP**:
+![framework-ip-option](Images/image58.png)
 
-- 
-![host only](Images/image59.png)
+- **Set Framework IP Address** (Enter `192.168.100.150`):
+![set-framework-ip](Images/image59.png)
 
-- 
-![host only](Images/image60.png)
+- **Configure Network Monitoring**:
+![network-monitoring](Images/image60.png)
 
-- 
-![host only](Images/image61.png)
+- **Select Monitoring Interface** (Choose `eth1` with Promiscuous Mode):
+![select-interface](Images/image61.png)
 
-- 
-![host only](Images/image62.png)
+- **Return to Main Menu**:
+![main-menu](Images/image62.png)
 
-- 
-![host only](Images/image63.png)
+- **Apply Configuration Changes**:
+![apply-changes](Images/image63.png)
 
-- 
-![host only](Images/image64.png)
+- **Confirm Configuration Update**:
+![confirm-update](Images/image64.png)
 
-- 
-![host only](Images/image65.png)
+- **Wait for Configuration Process**:
+![config-process](Images/image65.png)
 
 ### Target Systems Setup
 
@@ -327,13 +450,12 @@ From The `Ossim-Server` machine: (or the opposite)
    - Storage: 15GB fixed disk
 
 2. **Installation Process**:<br>
-Follow default steps.
 
-- 
-![host only](Images/image70.png)
+- **Configure User Profile and Credentials:**:
+![profile-setup](Images/image70.png)
 
-- 
-![host only](Images/image71.png)
+- **Installation Complete and System Ready**:
+![system-ready](Images/image71.png)
 
 3. **Install and Configure Apache**:
    ```bash
@@ -344,9 +466,10 @@ Follow default steps.
    sudo ufw enable
    ```
 
-4. **Change network mode to Host-Only Adapter**
+4. **Change network mode to Host-Only Adapter**:
+From now on we don't need the internet on this VM. Turn it off and change its networking mode to Host-Only Adapter.
 
-5. **Configure Static IP**:
+6. **Configure Static IP**:
    ```bash
    # Edit Netplan configuration
    sudo nano /etc/netplan/00-installer-config.yaml
