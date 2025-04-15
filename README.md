@@ -84,55 +84,55 @@ Detailed steps to install and configure the OSSIM server VM:
 2. **Installation Process**:</br>
 Power on, Then follow:
 
-- Mount your inmage and reboot:
+- **Boot from ISO Image**:
 ![iso](Images/image3.png)
 
-- Pick the first choice as we're on `Server Deployment` step:
+- **Select Server Deployment Mode**:
 ![server](Images/image4.png)
 
-- Select a language:
+- **Configure System Language**:
 ![language](Images/image5.png)
 
-- Select your location:
+- **Set Geographic Location**:
 ![location](Images/image6.png)
 
-- Configure the keyboard:
+- **Configure Keyboard Layout**:
 ![keyboard](Images/image7.png)
 
-- Use `192.168.100.150` as address:
-![host only](Images/image8.png)
+- **Configure Network: IP Address** (Use `192.168.100.150`):
+![network ip](Images/image8.png)
 
-- Leave the Netmask as default:
-![host only](Images/image9.png)
+- **Configure Network: Subnet Mask** (Leave default):
+![network mask](Images/image9.png)
 
-- Use `192.168.100.1` as gateway:
-![host only](Images/image10.png)
+- **Configure Network: Gateway** (Use `192.168.100.1`):
+![network gateway](Images/image10.png)
 
-- Use `192.168.100.1` as Name server address:
-![host only](Images/image11.png)
+- **Configure Network: DNS Server** (Use `192.168.100.1`):
+![network dns](Images/image11.png)
 
-- Set your Password, Confirme it:
-![host only](Images/image12.png) 
+- **Set Root Password**:
+![password](Images/image12.png) 
 
-- Select your time zone:
-![host only](Images/image13.png)
+- **Select Time Zone**:
+![timezone](Images/image13.png)
 
 - Wait...
-![host only](Images/image14.png)
+![progress1](Images/image14.png)
 
 - Wait more...
-![host only](Images/image15.png)
+![progress2](Images/image15.png)
 
-- And there you have it:
-![host only](Images/image16.png)
+- **Installation Complete**:
+![complete](Images/image16.png)
 
 3. **Post-Installation Configuration**:
 
-- After you login (`root:root` In my case), Shut it down:
-![host only](Images/image18.png)
+- **Login and Shutdown** (Default credentials: `root:root`):
+![shutdown](Images/image18.png)
 
-- Change its Networking mode to `Host-Only Adapter`:
-![host only](Images/image19.png)
+- **Configure VM Network Adapter** (Change to `Host-Only Adapter`):
+![network-config](Images/image19.png)
 
 ### OSSIM Sensor Deployment
 Steps to install and configure the OSSIM sensor VM:
@@ -148,47 +148,47 @@ Steps to install and configure the OSSIM sensor VM:
 2. **Installation Process**:</br>
 Power on, Then follow:
 
-- Mount your inmage and reboot:
-![host only](Images/image20.png)
+- **Boot from ISO Image**:
+![boot-sensor](Images/image20.png)
 
-- Select `Install Alient Sensor`:
-![host only](Images/image21.png)
+- **Select Sensor Installation Mode**:
+![sensor-mode](Images/image21.png)
 
-- Select a language:
-![host only](Images/image22.png)
+- **Configure System Language**:
+![sensor-language](Images/image22.png)
 
-- Select your location:
-![host only](Images/image23.png)
+- **Set Geographic Location**:
+![sensor-location](Images/image23.png)
 
-- Configure the keyboard:
-![host only](Images/image24.png)
+- **Configure Keyboard Layout**:
+![sensor-keyboard](Images/image24.png)
 
-- Set `192.168.100.151` as Address:
-![host only](Images/image25.png)
+- **Configure Network: IP Address** (Use `192.168.100.151`):
+![sensor-ip](Images/image25.png)
 
-- Leave default Netmask
-![host only](Images/image26.png)
+- **Configure Network: Subnet Mask** (Leave default):
+![sensor-mask](Images/image26.png)
 
-- Use `192.168.100.1` as Gateway
-![host only](Images/image27.png)
+- **Configure Network: Gateway** (Use `192.168.100.1`):
+![sensor-gateway](Images/image27.png)
 
-- Leave `192.168.100.1` as Name server address:
-![host only](Images/image28.png)
+- **Configure Network: DNS Server** (Use `192.168.100.1`):
+![sensor-dns](Images/image28.png)
 
-- Set your Password, Confirme it:
-![host only](Images/image29.png)
+- **Set Root Password**:
+![sensor-password](Images/image29.png)
 
-- Select your time zone:
-![host only](Images/image30.png)
+- **Select Time Zone**:
+![sensor-timezone](Images/image30.png)
 
 - Wait...
-![host only](Images/image31.png)
+![sensor-progress1](Images/image31.png)
 
 - Wait more...
-![host only](Images/image32.png)
+![sensor-progress2](Images/image32.png)
 
-- And there you have it:
-![host only](Images/image33.png)
+- **Installation Complete**:
+![sensor-complete](Images/image33.png)
 
 3. **Network Interface Configuration**:<br>
 After you shut it down, you should configure 2 interfaces as:
@@ -205,20 +205,20 @@ After you shut it down, you should configure 2 interfaces as:
 ### Additional Server And Sensor Configuration
 Run both machines together.
 
-![host only](Images/image35.png)
+![host only](Images/image36.png)
 
 
 1. **Server-Sensor Connectivity Test**:<br>
 From The `Ossim-Server` machine: (or the opposite)
 
-- Select `Jailbreak System` option:
-![host only](Images/image37.png)
+- **Access System Shell** (Select "Jailbreak System"):
+![jailbreak](Images/image37.png)
 
-- Click `yes`:
-![host only](Images/image38.png)
+- **Confirm Shell Access**:
+![shell-confirm](Images/image38.png)
 
-- Try to ping on Sensor address:
-![host only](Images/image39.png)
+- **Test Network Connectivity** (Ping on Sensor):
+![ping-test](Images/image39.png)
 
 
 2. **Server Configuration**:
