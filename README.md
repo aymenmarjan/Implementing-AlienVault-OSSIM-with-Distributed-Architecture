@@ -2,7 +2,7 @@
 *A comprehensive guide to deploying an open-source SIEM solution with distributed architecture*
 
 ## 📋 Table of Contents
-- [Overview](#overview)
+- [Overview](##overview)
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
 - [Installation Guide](#installation-guide)
