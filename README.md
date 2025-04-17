@@ -14,7 +14,6 @@
   - [Sensor Configuration](#sensor-configuration)
   - [Log Forwarding Setup](#log-forwarding-setup)
   - [Detection Rules](#detection-rules)
-- [Testing & Validation](#testing--validation)
 - [Use Cases](#use-cases)
 - [Resources](#resources)
 
@@ -663,35 +662,6 @@ Web Server: `marjan:123`
   - Alerts recieved Also on our siem interface
 
 ![host only](Images/image100.png)
-
-
-## 🧪 Testing & Validation
-
-### Basic Connectivity Tests
-```bash
-# Test connectivity between all systems
-ping 192.168.100.150
-ping 192.168.100.151
-ping 192.168.100.200
-ping 192.168.100.102
-```
-
-### Simulated Attack Scenarios
-1. **Web Scanning Detection**:
-   ```bash
-   # From Kali Linux
-   nikto -h 192.168.100.200
-   ```
-
-2. **Brute Force Detection**:
-   ```bash
-   # From Kali Linux
-   hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.100.200 http-post-form
-   ```
-
-3. **Alert Verification**:
-   - Screenshot of triggered alarms in OSSIM console
-   - Analysis of event details
 
 ## 📊 Use Cases
 
