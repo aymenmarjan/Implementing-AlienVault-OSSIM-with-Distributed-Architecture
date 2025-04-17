@@ -522,35 +522,39 @@ Turn on all the VMs
 
 3. **Screenshots**:
 
-- 
-![host only](Images/image74.png)
+- **Start Configuration Wizard**:
+![start-wizard](Images/image74.png)
 
-- 
-![host only](Images/image75.png)
+- **Proceed to Next Step**:
+![next-step](Images/image75.png)
 
-- 
-![host only](Images/image76.png)
+- **Add the missing machines, Select every machine's OS**:
+![asset-discovery](Images/image76.png)
 
-- 
-![host only](Images/image77.png)
+- **Deploy HIDS Agents**:
 
-- 
-![host only](Images/image78.png)
+**Enter Host Credentials**:
 
-- 
-![host only](Images/image79.png)
+OSSIM Manager & Sensor: `root:root`
+![credentials](Images/image77.png) 
 
-- 
-![host only](Images/image80.png)
+Web Server: `marjan:123`
+![Web-credentials](Images/image78.png)
 
-- 
-![host only](Images/image81.png)
+- **Skip LOG MANAGEMENT** (Internet access required):
+![skip-log-management](Images/image79.png)
 
-- 
-![host only](Images/image82.png)
+- **Skip JOIN OTX** (Internet access required):
+![skip-additional](Images/image80.png)
 
-- 
-![host only](Images/image83.png)
+- **Complete the Configuration Wizard**:
+![finish-setup](Images/image81.png)
+
+- **Launch OSSIM Dashboard**:
+![launch-dashboard](Images/image82.png)
+
+- **OSSIM Web Interface Ready for Use**:
+![dashboard-ready](Images/image83.png)
 
 ### Sensor Configuration
 1. **Verify Sensor Connection**:
