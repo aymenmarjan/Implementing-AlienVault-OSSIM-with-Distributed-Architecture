@@ -29,23 +29,11 @@ This project documents the implementation of AlienVault OSSIM (Open Source Secur
 ## 🏗️ Architecture
 
 ```mermaid
-graph TD
-    subgraph Lab Environment [192.168.100.0/24]
-        A[OSSIM Server<br>192.168.100.150] --> B[OSSIM Sensor<br>192.168.100.151]
-        B -->|Monitoring| C[Ubuntu Web Server<br>192.168.100.200]
-        D[Kali Linux<br>192.168.100.102] -->|Attack Simulation| C
-        B -->|Event Collection| A
-        C -->|Syslog| A
-    end
-    
-    subgraph Components
-        A --- A1[Central Management]
-        A --- A2[Correlation Engine]
-        A --- A3[Dashboard & Reporting]
-        B --- B1[NIDS Capabilities]
-        B --- B2[Log Collection]
-        B --- B3[Network Monitoring]
-    end
+graph LR
+    B[OSSIM Sensor<br>192.168.100.151] -->|Forwards Events| A[OSSIM Server<br>192.168.100.150]
+    C[Web Server<br>192.168.100.200] -->|Logs| A
+    D[Kali Linux<br>192.168.100.102] -->|Attacks| C
+    C -->|Network Monitoring| B
 ```
 
 **Software Requirements**:
