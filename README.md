@@ -35,6 +35,16 @@ graph LR
     D[Kali Linux<br>192.168.100.102] -->|Attacks| C
     C -->|Network Monitoring| B
 ```
+**How It Works**
+- **Sensor**: Watches traffic, detects attacks (e.g., scans from Kali), sends alerts to Server.
+- **Server**: Analyzes alerts and logs to identify threats.
+- **Web Server**: Sends logs (e.g., SSH, HTTP) to Server; monitored by Sensor.
+- **Kali**: Tests the system with attacks.
+
+**Key Features**
+- **Monitoring**: Sensor flags suspicious traffic.
+- **Logs**: Web Server forwards logs to Server.
+- **Visibility**: Server combines data for threat detection.
 
 **Software Requirements**:
 - VirtualBox (latest version)
