@@ -48,7 +48,10 @@ graph LR
 
 **Software Requirements**:
 - VirtualBox (latest version)
-- AlienVault OSSIM ISO ([Download Link](https://cybersecurity.att.com/products/ossim/download))
+- AlienVault OSSIM ISO 
+  - Official Download: [AT&T Cybersecurity](https://cybersecurity.att.com/products/ossim/download)  
+  > ⚠️ Note: Versions 5.8.14 and later of the official ISO are known to hang or fail during the `alienvault-gvm11-feed` step, leading to incomplete installs and missing configuration files :contentReference[oaicite:0]{index=0}.  
+  - **Use this stably tested in our lab ISO** : [Download alienvault-ossim-custom.iso](https://github.com/aymenmarjan/Implementing-AlienVault-OSSIM-with-Distributed-Architecture/releases/download/v1.0/alienvault-ossim-custom.iso)
 - Ubuntu Server ISO ([Download Link](https://ubuntu.com/download/server))
 - Kali Linux VirtualBox VM ([Download Link](https://www.kali.org/get-kali/#kali-virtual-machines))
 
