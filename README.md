@@ -482,7 +482,7 @@ Turn on all the VMs
    |------|------------|
    | **SSH connection attempt from Kali VM** | <img src="Images/image98.png" alt="SSH attempt" width="400"/> |
    | **Logs received via syslog** | <img src="Images/image99.png" alt="Logs received" width="400"/> |
-   | **Alerts recieved Also on our SIEM interface (Under `ANALYSIS` → `SECURITY EVENTS (SIEM)`) ** | <img src="Images/image100.png" alt="SIEM alerts" width="400"/> |
+   | **Logs recieved Also on our SIEM interface (Under `ANALYSIS` → `SECURITY EVENTS (SIEM)`)** | <img src="Images/image100.png" alt="SIEM alerts" width="400"/> |
    
    </div>
 
