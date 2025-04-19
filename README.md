@@ -496,5 +496,4 @@ OSSIM supports multiple security monitoring use cases:
 ## 📚 Resources
 
 - [Official AlienVault Documentation](https://cybersecurity.att.com/documentation)
-- [Community Forums](https://community.alienvault.com/)
 - [Youtube Playlist Comprehensive Tutorial](https://www.youtube.com/playlist?list=PLxTwjzMO9Zf5VdowToEnM_DdHDgAVtCem)
