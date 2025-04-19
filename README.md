@@ -50,7 +50,7 @@ graph TD
 - VirtualBox (latest version)
 - AlienVault OSSIM ISO ([Download Link](https://cybersecurity.att.com/products/ossim/download))
 - Ubuntu Server ISO ([Download Link](https://ubuntu.com/download/server))
-- Kali Linux VirtualBox VM ([Download Link](https://www.kali.org/get-kali/))
+- Kali Linux VirtualBox VM ([Download Link](https://www.kali.org/get-kali/#kali-virtual-machines))
 
 ## 🚀 Installation Guide
 
