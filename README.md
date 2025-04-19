@@ -1,8 +1,10 @@
 # AlienVault OSSIM Implementation
 
-> A comprehensive guide to deploying an open-source SIEM solution with distributed architecture
+A comprehensive guide to deploying an open-source SIEM solution with distributed architecture
 
-<img src="https://github.com/alienvault/ossim/raw/master/logo.png" width="250" alt="AlienVault OSSIM Logo" />
+<p align="center">
+  <img src="Images/LOGO.jpg" width="600" alt="AlienVault OSSIM Logo" />
+</p>
 
 ## 📋 Table of Contents
 - [Overview](#overview)
