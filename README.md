@@ -293,10 +293,10 @@ Run both machines together.
    
    From now on, we won't need the Internet on this virtual machine. Power it off and change its networking mode to Host-Only Adapter.
 
-6. **Configure Static IP**:
+6. **Configure Static IP**:<br>
+Edit Netplan configuration
 
    ```bash
-   # Edit Netplan configuration
    sudo nano /etc/netplan/00-installer-config.yaml
    ```
    
@@ -452,10 +452,10 @@ Turn on all the VMs
 
 ### Log Forwarding Setup
 
-1. **Configure Syslog on Web Server**:
+1. **Configure Syslog on Web Server**:<br>
+Edit rsyslog configuration
 
    ```bash
-   # Edit rsyslog configuration
    sudo nano /etc/rsyslog.d/50-default.conf
    ```
 
@@ -465,13 +465,13 @@ Turn on all the VMs
    *.* @192.168.100.150:514
    ```
 
-2. **Restart Service**:
+3. **Restart Service**:
 
    ```bash
    sudo systemctl restart rsyslog
    ```
 
-3. **Verify Log Forwarding**:
+4. **Verify Log Forwarding**:
 
    **On the server**:
    
